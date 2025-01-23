@@ -30,6 +30,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Can be moved to a proper place where the tracking has to be started
         val serviceIntent = Intent(this, MonitoringService::class.java)
         startService(serviceIntent)
         viewModel.setRepo(MonitoringService.provideRepo())
