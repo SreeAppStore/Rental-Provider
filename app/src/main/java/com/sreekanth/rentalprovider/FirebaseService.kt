@@ -3,6 +3,7 @@ package com.sreekanth.rentalprovider
 import android.util.Log
 
 private const val TAG = "FirebaseService"
+
 class FirebaseService {
     init {
         // init every dependency to the Firebase
@@ -16,7 +17,9 @@ class FirebaseService {
         return status
     }
 
-    suspend fun sendSpeedWarning(currentSpeed: Int) :Boolean {
+    suspend fun sendSpeedWarning(currentSpeed: Int): Boolean {
         // Logic for sending a warning to Firebase.
-        Log.d(TAG, "sendSpeedWarning() called with: currentSpeed = $currentSpeed")    }
+        Log.d(TAG, "sendSpeedWarning() called with: currentSpeed = $currentSpeed")
+        return true
+    }
 }
